@@ -1,6 +1,7 @@
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config()
+
 
 export const sequelize = new Sequelize(
   process.env.DB_NAME!,
@@ -12,3 +13,15 @@ export const sequelize = new Sequelize(
     logging: false,
   }
 );
+
+console.log(process.env.DB_NAME)
+
+export const connectToDatabase = async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+}
+// connectToDatabase()
