@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/index.ts",
+    "dev": "nodemon --watch 'src/**/*' --ext ts,js --exec 'ts-node' src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
@@ -19,13 +19,19 @@
     "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
     "mysql2": "^3.15.3",
+    "nodemailer": "^7.0.10",
     "sequelize": "^6.37.7",
     "zod": "^4.1.12"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
+    "@types/nodemailer": "^7.0.3",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "sequelize-cli": {
+    "config": "sequelize-cli.js",
+    "migrations-path": "migrations"
   }
 }
