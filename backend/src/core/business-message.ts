@@ -10,6 +10,7 @@ export const BUSINESS_MESSAGES = {
     INVALID_CREDENTIALS: "Invalid email or password.",
     UNAUTHORIZED: "You are not authorized to access this resource.",
     TOKEN_EXPIRED: "Token expired.",
+    LOG_IN_SUCCESSFULL: "Log in Sucessfull "
   },
 
   USER: {
@@ -27,5 +28,6 @@ export const BUSINESS_MESSAGES = {
     REQUIRED_FIELDS: "Required fields are missing.",
     BAD_REQUEST: "Invalid request data.",
     SOMETHING_WENT_WRONG: "Something went wrong. Please try again.",
+    ROUTE_NOT_FOUND: "The requested endpoint does not exist."
   }
 } as const;

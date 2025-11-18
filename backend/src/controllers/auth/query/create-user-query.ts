@@ -14,6 +14,6 @@ export const createUserQuery = async ({ email, name, passwordHash, tenantId }: C
         email,
         password: passwordHash,
         tenantId,
-    });
+    },{raw:true});
     
 }

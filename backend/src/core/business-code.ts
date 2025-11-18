@@ -15,4 +15,5 @@ export const BUSINESS_CODES = {
   BAD_REQUEST: "BAD_REQUEST",
 
   UNKNOWN: "UNKNOWN_ERROR",
+  NOT_FOUND: "NOT_FOUND"
 } as const;
